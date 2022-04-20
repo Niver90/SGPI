@@ -6,20 +6,25 @@ using System.Threading.Tasks;
 
 namespace SGPI.Controllers
 {
-    public class AdminController : Controller
+    public class CoordinadorController : Controller
     {
-        public IActionResult MenuAdmin()
-        {
-            return View();
-        }public IActionResult CrearUsuario()
+        public IActionResult Consulta()
         {
             return View();
         }
-        public IActionResult BuscarUsuario()
+        public IActionResult Entrevistas()
         {
             return View();
         }
-        public IActionResult Informes()
+        public IActionResult Homologar()
+        {
+            return View();
+        }
+        public IActionResult ProgramarAsignaturas()
+        {
+            return View();
+        }
+        public IActionResult MenuCoordinador()
         {
             return View();
         }

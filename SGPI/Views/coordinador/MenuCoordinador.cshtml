@@ -1,76 +1,23 @@
 ﻿
 @{
-    ViewData["Title"] = "CrearUsuario";
+    ViewData["Title"] = "MenuCoordinador";
 }
 <a href="">Cerrar Sesión</a>
 <br />
-<h1>Crear Usuario</h1>
+<h1>Coordinador</h1>
 <br />
 <br />
+<head>
+    <link href="~/css/Style2.css" rel="stylesheet" />
+</head>
 <body>
-    Tipo Documento: <select name="TipoDocumento" id="TipoDocumento">
-        <option value="1">Cedula</option>
-        <option value="2">T.I</option>
-        <option value="3">Pasaporte</option>
-        <option value="4">C.Extranjera</option>
-    </select>
-    <br />
-    <br />
-    <table>
-        <tr>
-            <td>Num.Documento:</td>
-            <td><input type="text" name="txtNombre" size="20"></td>
-        </tr>
-        <tr>
-            <td>Nombre:</td>
-            <td><input type="text" name="txtNombre" size="20"></td>
-        </tr>
-        <tr>
-            <td>Apellido:</td>
-            <td><input type="text" name="txtApellido" size="20"></td>
-        </tr>
-        <tr>
-            <td>E-mail:</td>
-            <td><input type="text" name="txtCedula" size="20"></td>
-        </tr>
-        <tr>
-            <td>Dirección:</td>
-            <td><input type="text" name="txtDireccion" size="20"></td>
-        </tr>
-        <tr>
-            <td>Teléfono:</td>
-            <td><input type="text" name="txtTelefono" size="20"></td>
-        </tr>
+    <ul>
+        <li class="form"><a href="BuscarUsuario.cshtml">Consulta</a></li>
+        <li class="form"><a href="ProgramarAsignaturas.cshtml">Programar Asignaturas</a></li>
+        <li class="form"><a href="Homologar.cshtml">Homologar</a></li>
+        <li class="form"><a href="Entrevistas.cshtml">Entrevistas</a></li>
 
-    </table>
-    <br />
-    Genero: <select name="Genero" id="Genero">
-        <option value="1">Masculino</option>
-        <option value="2">Femenino</option>
-        <option value="3">Otro</option>
-
-
-    </select>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo Rol: <select name="TipoRol" id="TipoRol">
-        <option value="1">Administrador</option>
-        <option value="2">Coordinador</option>
-        <option value="3">Estudiante</option>
-
-
-    </select>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programa: <select name="Programa" id="Programa">
-        <option value="1">Especializacion en seguridad de informaciòn</option>
-        <option value="2">Maestria en gestion TI</option>
-        <option value="3">Maestria en gestion de riesgo y medio ambiente</option>
-
-    </select>
-    <br />
-    <br />
-    <input type="button" name="btnCrear" value="Crear" />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="btnCancelar" value="Cancelar" />
+    </ul>
     <img src="data:image/jpeg;base64,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" />
-
-
-
 </body>
 

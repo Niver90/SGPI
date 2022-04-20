@@ -1,0 +1,19 @@
+﻿ul.horizontal {
+    margin: 0;
+    padding: 0;
+}
+ ul.horizontal li {
+        display: block;
+        float: left;
+        padding: 0 10px;
+        
+    }
+.form {
+    height: 15%;
+    width: 23%;
+    border: 2pt solid black;
+    font-size:200%;
+    background-color:lightgreen;
+    
+}
+ 
