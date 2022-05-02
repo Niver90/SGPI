@@ -25,6 +25,14 @@ namespace SGPI
         {
             services.AddControllersWithViews();
         }
+        //Agregar contexto para conectar la base de datos
+
+        /*String connectionString = ConfigurationExtensions
+            .GetConnectionString(this.Configuration, "DefaultConnectioString");
+        services.AddDbContext<SGPI_DBContext>(
+            Options=> options.UseSqlServer(ConnectionString)
+            );*/
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
