@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace SGPI.Models
 {
-    public class Asignatura
+    public class TipoDocumento
     {
+        public int IdTipoDoc { get; set; }
+        public string ValTipoDoc { get; set; }
     }
 }

@@ -7,5 +7,7 @@ namespace SGPI.Models
 {
     public class Rol
     {
+        public int IdRol { get; set; }
+        public string ValRol { get; set; }
     }
 }

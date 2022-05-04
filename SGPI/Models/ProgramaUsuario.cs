@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace SGPI.Models
 {
-    public class Entrevista
+    public class ProgramaUsuario
     {
-        public int IdEntrevista { get; set; }
+        public int IdProgramaUsu { get; set; }
+        public int IdPrograma { get; set; }
         public int IdUsuario { get; set; }
-        public int FechaEntrev { get; set; }
-        public string Estado { get; set; }
-
     }
 }

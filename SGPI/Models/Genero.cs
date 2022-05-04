@@ -7,5 +7,7 @@ namespace SGPI.Models
 {
     public class Genero
     {
+        public int IdGenero { get; set; }
+        public string ValGenero { get; set; }
     }
 }
