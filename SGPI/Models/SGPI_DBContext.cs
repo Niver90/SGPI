@@ -7,5 +7,6 @@ namespace SGPI.Models
 {
     public class SGPI_DBContext
     {
+        
     }
 }

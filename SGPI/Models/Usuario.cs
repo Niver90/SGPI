@@ -10,7 +10,8 @@ namespace SGPI.Models
         public int IdUsuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int TipoDocumento { get; set; }
+        public int TipoDoc { get; set; }
+        public int NumDoc { get; set; }
         public string Genero { get; set; }
         public string Email { get; set; }
         public string Direccion { get; set; }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SGPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace SGPI.Controllers
 {
     public class AdminController : Controller
     {
-  /*      private SGPI_DBContext;
+  /*      private SGPI_DBContext context;
         public AdminController (SGPI_DBContext contexto)
         {
             context = contexto;
@@ -20,7 +21,7 @@ namespace SGPI.Controllers
         }
         public IActionResult CrearUsuario()
         {
-  /*          ViewBag.genero = context.Genero.ToList();
+  /*          ViewBag.genero = context.Generos.ToList();
             ViewBag.programa = context.Programa.ToList();
             ViewBag.rol = context.Rol.ToList();
             ViewBag.tipoDocumento = context.TipoDocumento.ToList();*/
@@ -30,11 +31,11 @@ namespace SGPI.Controllers
         public IActionResult CrearUsuario(Usuario usuario)
         {
             context.Add(usuario);
-            Context.SaveChanges();
+            context.SaveChanges();
             return View();
         }*/
         /*        [HttpPost]
-                public IActionResult BuscarUsuario(Usuario user)
+                public IActionResult BuscarUsuario(Usuario usuario)
                 {
                     var listaUsuario = context.Usuarios
                         .Where(u => u.NumDoc

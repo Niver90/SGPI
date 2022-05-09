@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SGPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
