@@ -9,11 +9,11 @@ namespace SGPI.Controllers
 {
     public class AdminController : Controller
     {
-  /*      private SGPI_DBContext context;
+        private SGPI_DBContext context;
         public AdminController (SGPI_DBContext contexto)
         {
             context = contexto;
-        }*/
+        }
 
         public IActionResult MenuAdmin()
         {
@@ -21,27 +21,27 @@ namespace SGPI.Controllers
         }
         public IActionResult CrearUsuario()
         {
-  /*          ViewBag.genero = context.Generos.ToList();
-            ViewBag.programa = context.Programa.ToList();
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.programa = context.Programas.ToList();
             ViewBag.rol = context.Rol.ToList();
-            ViewBag.tipoDocumento = context.TipoDocumento.ToList();*/
+            ViewBag.tipoDocumento = context.TipoDocumento.ToList();
             return View();
         }
- /*       [HttpPost]
+        [HttpPost]
         public IActionResult CrearUsuario(Usuario usuario)
         {
             context.Add(usuario);
             context.SaveChanges();
             return View();
-        }*/
-        /*        [HttpPost]
+        }
+                [HttpPost]
                 public IActionResult BuscarUsuario(Usuario usuario)
                 {
-                    var listaUsuario = context.Usuarios
-                        .Where(u => u.NumDoc
-                        .Contains(user.NumDoc)).ToList();
+            var listaUsuario = context.Usuarios
+                .Where(u => u.NumDoc == usuario.NumDoc);
+                        
                     return View(listaUsuario);
-                }*/
+                }
         public IActionResult BuscarUsuario()
         {
             return View();

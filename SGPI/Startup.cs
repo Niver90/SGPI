@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SGPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SGPI
 {
@@ -24,14 +26,14 @@ namespace SGPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<SGPI_DBContext>(
+                options =>  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"))
+                );
         }
         //Agregar contexto para conectar la base de datos
 
-        /*String connectionString = ConfigurationExtensions
-            .GetConnectionString(this.Configuration, "DefaultConnectioString");
-        services.AddDbContext<SGPI_DBContext>(
-            Options=> options.UseSqlServer(ConnectionString)
-            );*/
+        /**/
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

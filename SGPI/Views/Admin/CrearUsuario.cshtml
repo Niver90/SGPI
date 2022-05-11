@@ -17,11 +17,11 @@
                         <div class="form-group col-md-6">
                             <label asp-for="TipoDoc" class="col-form-label">Tipo Documento</label>
                             <select id="TipoDoc" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>Cedula</option>
-                                <option>T.Identidad</option>
-                                <option>Pasaporte</option>
-                                <option>C.Extrajera</option>
+                                @foreach (var TipoDoc in ViewBag.tipo_documento)
+                                {
+                                <option>TipoDoc.tipoDocumento</option>
+
+                                }
                             </select>
                         </div>
                         <div class="form-group col-md-6">
