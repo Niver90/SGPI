@@ -9,8 +9,17 @@ namespace SGPI.Controllers
 {
     public class CoordinadorController : Controller
     {
+        private SGPI_DBContext context;
+        public CoordinadorController(SGPI_DBContext contexto)
+        {
+            context = contexto;
+        }
         public IActionResult Consulta()
         {
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.programa = context.Programas.ToList();
+            ViewBag.rol = context.Rol.ToList();
+            ViewBag.tipoDocumento = context.TipoDocumento.ToList();
             return View();
         }
         public IActionResult Entrevistas()

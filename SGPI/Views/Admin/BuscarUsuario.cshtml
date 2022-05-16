@@ -44,8 +44,8 @@
                                 <td>@Html.DisplayFor(model => model.Rol)</td>
                                 <td>123</td>
                                 <td>
-                                    <input type="button" value="Editar">
-                                    &nbsp;<input type="button" value="Borrar">
+                                    @Html.ActionLink("Editar", "EditarUsuario", new {IdUsuario=Model.IdUsuario}, new { @class = "btn btn-warning" })
+                                    @Html.ActionLink("Eliminar","eliminar", new {IdUsuario=Model.IdUsuario})
                                 </td>
                             </tr>
                         </tbody>

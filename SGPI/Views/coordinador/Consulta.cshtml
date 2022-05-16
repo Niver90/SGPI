@@ -26,9 +26,11 @@
                             <label asp-for="Programa" class="col-form-label text-white">Buscar por Programa:&nbsp; </label>
                             <select id="Programa" class="form-control">
                                 <option selected>Elija su Programa...</option>
-                                <option>Especializacion en seguridad de información</option>
-                                <option>Maestria en gestion TI</option>
-                                <option>Maestria en gestion de riesgo y medio ambiente</option>
+                                @foreach (var programa in ViewBag.programa)
+                                {
+                                    <option>programa.programa</option>
+
+                                }
                             </select>
                             <div>
                                 <button type="submit" class="btn btn-primary ">Search</button>
