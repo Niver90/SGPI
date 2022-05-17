@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace SGPI.Models
 {
-    public class Genero
+    public partial class Genero
     {
+        public Genero()
+        {
+            Usuarios = new HashSet<Usuario>();
+        }
+
         public int IdGenero { get; set; }
-        public string ValGenero { get; set; }
+        public string Genero1 { get; set; }
+
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

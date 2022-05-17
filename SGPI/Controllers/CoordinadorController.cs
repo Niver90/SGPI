@@ -18,8 +18,8 @@ namespace SGPI.Controllers
         {
             ViewBag.genero = context.Generos.ToList();
             ViewBag.programa = context.Programas.ToList();
-            ViewBag.rol = context.Rol.ToList();
-            ViewBag.tipoDocumento = context.TipoDocumento.ToList();
+            ViewBag.rol = context.Rols.ToList();
+            ViewBag.tipoDocumento = context.TipoDocumentos.ToList();
             return View();
         }
         public IActionResult Entrevistas()

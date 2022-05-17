@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace SGPI.Models
 {
-    public class Programacion
+    public partial class Programacion
     {
         public int IdProgramacion { get; set; }
-        public int FechaInicio { get; set; }
-        public int FechaFin { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
         public int Bloque { get; set; }
         public string Salon { get; set; }
         public int IdModulo { get; set; }
         public string Semestre { get; set; }
         public int IdPrograma { get; set; }
 
+        public virtual Modulo IdModuloNavigation { get; set; }
+        public virtual Programa IdProgramaNavigation { get; set; }
     }
 }

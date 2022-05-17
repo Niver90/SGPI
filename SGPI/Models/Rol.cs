@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace SGPI.Models
 {
-    public class Rol
+    public partial class Rol
     {
+        public Rol()
+        {
+            Usuarios = new HashSet<Usuario>();
+        }
+
         public int IdRol { get; set; }
-        public string ValRol { get; set; }
+        public string Rol1 { get; set; }
+
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

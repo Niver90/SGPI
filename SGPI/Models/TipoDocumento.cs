@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace SGPI.Models
 {
-    public class TipoDocumento
+    public partial class TipoDocumento
     {
-        public int IdTipoDoc { get; set; }
-        public string ValTipoDoc { get; set; }
+        public TipoDocumento()
+        {
+            Usuarios = new HashSet<Usuario>();
+        }
+
+        public int IdTipoDocumento { get; set; }
+        public string TipoDocumento1 { get; set; }
+
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace SGPI.Models
 {
-    public partial class ProgramaUsuario
+    public partial class Entrevistum
     {
-        public int IdProgramaUsuario { get; set; }
-        public int IdPrograma { get; set; }
+        public int IdEntrevista { get; set; }
         public int IdUsuario { get; set; }
+        public DateTime FechaEntrevista { get; set; }
+        public string Estado { get; set; }
 
-        public virtual Programa IdProgramaNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }
     }
 }
