@@ -16,7 +16,7 @@
                     <div class="input-group mb-2">
                         <input type="text" class="form-control" placeholder="Ingrese Documento del Estudiante" aria-label="Ingrese Documento" aria-describedby="basic-addon2">
                         <div>
-                            <button class="btn btn-primary" type="button">Search</button>
+                            <button class="btn btn-primary" type="submit">Search</button>
                         </div>
                     </div>
                     <div class="form-row">
@@ -29,13 +29,13 @@
                             <input type="text" class="form-control" id="Nombre">
                         </div>
                         <div class="form-group col-md-4">
-                            <label asp-for="NumDoc" class="col-form-label">Documento</label>
+                            <label asp-for="Documento" class="col-form-label">Documento</label>
                             <input type="text" class="form-control" id="Apellido">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label asp-for="Programa" class="col-form-label">Programa</label>
+                            <label asp-for="IdPrograma" class="col-form-label">Programa</label>
                             <input type="text" class="form-control" id="Programa">
                         </div>
                         <div class="form-group col-md-4">
@@ -48,7 +48,7 @@
                                 <option selected>Choose...</option>
                                 <option>Transf.Interna</option>
                                 <option>Transf.Externa</option>
-                                </select>
+                            </select>
                         </div>
                     </div>
 
@@ -83,10 +83,11 @@
                                 </td>
                                 <td><input type="text" name="CodAsigHomo" size="1" /></td>
                                 <td><input type="text" name="Creditos" size="1" /></td>
-                                <td></td>
+                                <td><input type="text" name="Nota" size="1" /></td>
                             </tr>
                         </tbody>
                     </table>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>
         </div>

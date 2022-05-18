@@ -14,38 +14,36 @@
             <div class="card-body">
                 <form method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Ingrese Documento" aria-label="Ingrese Documento" aria-describedby="basic-addon2">
+                        <input asp-for="Documento" type="text" class="form-control" placeholder="Ingrese Documento" aria-label="Ingrese Documento" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">Search</button>
+                            <button class="btn btn-primary" type="submit">Search</button>
                         </div>
                     </div>
                     <br />
                     <table class="table table-dark table-striped" border="1">
                         <thead>
                             <tr>
-                                <th scope="col">@Html.DisplayNameFor(model => model.TipoDoc)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.NumDoc)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Nombre)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Apellido)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Programa)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Rol)</th>
-                                <th scope="col">FechaMod</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Tipo de documento</th>
+                                <th scope="col">Numero de documento</th>
+                                <th scope="col">Programa</th>
+                                <th scope="col">Rol</th>
                                 <th scope="col">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
 
-                                <td>@Html.DisplayFor(model => model.TipoDoc)</td>
-                                <td>@Html.DisplayFor(model => model.NumDoc)</td>
+                                <td>@Html.DisplayFor(model => model.IdTipoDocumento)</td>
+                                <td>@Html.DisplayFor(model => model.Documento)</td>
                                 <td>@Html.DisplayFor(model => model.Nombre)</td>
                                 <td>@Html.DisplayFor(model => model.Apellido)</td>
-                                <td>@Html.DisplayFor(model => model.Programa)</td>
-                                <td>@Html.DisplayFor(model => model.Rol)</td>
-                                <td>123</td>
+                                <td>@Html.DisplayFor(model => model.IdPrograma)</td>
+                                <td>@Html.DisplayFor(model => model.IdRol)</td>
                                 <td>
-                                    @Html.ActionLink("Editar", "EditarUsuario", new {IdUsuario=Model.IdUsuario}, new { @class = "btn btn-warning" })
-                                    @Html.ActionLink("Eliminar","eliminar", new {IdUsuario=Model.IdUsuario})
+                                    @Html.ActionLink("Editar", "Editar", new {IdUsuario=Model.IdUsuario}, new { @class = "btn btn-dark" })
+                                    @Html.ActionLink("Eliminar","Eliminar", new {IdUsuario=Model.IdUsuario}, new { onclick = "return confirm('�Esta seguro?')", @class = "btn btn-warning" })
                                 </td>
                             </tr>
                         </tbody>

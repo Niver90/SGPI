@@ -1,4 +1,4 @@
-﻿@model Pago
+﻿@model Usuario
 
 
 @{
@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-inline">
                         <div class="form-group mb-2">
-                            <label asp-for="p" class="col-form-label text-white">Buscar por Programa:&nbsp; </label>
+                            <label asp-for="IdPrograma" class="col-form-label text-white">Buscar por Programa:&nbsp; </label>
                             <select id="Programa" class="form-control">
                                 <option selected>Elija su Programa...</option>
                                 @foreach (var programa in ViewBag.programa)
@@ -43,11 +43,11 @@
                     <table class="table table-dark table-striped" border="1">
                         <thead>
                             <tr>
-                                <th scope="col">@Html.DisplayNameFor(model => model.)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Nombre)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.IdPrograma)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Telefono)</th>
+                                <th scope="col">Documento</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Programa</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefono</th>
                                 <th scope="col">ValorPagado</th>
                                 <th scope="col">FechaPago</th>
                                 <th scope="col">Estado</th>
@@ -61,9 +61,9 @@
                                 <td>@Html.DisplayFor(model => model.Nombre)</td>
                                 <td>@Html.DisplayFor(model => model.IdPrograma)</td>
                                 <td>@Html.DisplayFor(model => model.Email)</td>
-                                <td>@Html.DisplayFor(model => model.)</td>
-                                <td>@Html.DisplayFor(model => model.)</td>
-                                <td>@Html.DisplayFor(model => model.)</td>
+                                <td>@ViewBag.valorPagado</td>
+                                <td>@ViewBag.fechaPago</td>
+                                <td>@ViewBag.estado</td>
                                 <td></td>
                                 <td><a href="">Ver Archivo</a></td>
                             </tr>

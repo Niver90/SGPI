@@ -23,17 +23,18 @@
                     <div class="form-row">
 
                         <div class="form-group col-md-4">
-                            <label asp-for="NumDoc" class="col-form-label">No. Documento</label>
+                            <label asp-for="Documento" class="col-form-label">No. Documento</label>
                             <input type="text" class="form-control" id="NumDocumento" placeholder="Document number">
                         </div>
                         <div class="form-group col-md-4">
-                            <label asp-for="TipoDoc" class="col-form-label">Tipo Documento</label>
+                            <label asp-for="IdTipoDocumento" class="col-form-label">Tipo Documento</label>
                             <select id="TipoDoc" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Cedula</option>
-                                <option>T.Identidad</option>
-                                <option>Pasaporte</option>
-                                <option>C.Extrajera</option>
+                                @foreach (var TipoDoc in ViewBag.tipodocumento)
+                                {
+                                    <option>TipoDoc.tipodocumento</option>
+
+                                }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
@@ -48,21 +49,25 @@
                             <input type="text" class="form-control" id="Apellido" placeholder="Last Name">
                         </div>
                         <div class="form-group col-md-4">
-                            <label asp-for="Genero" class="col-form-label">Genero</label>
+                            <label asp-for="IdGenero" class="col-form-label">Genero</label>
                             <select id="Genero" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Masculino</option>
-                                <option>Femenino</option>
-                                <option>Otro</option>
+                                @foreach (var Genero in ViewBag.genero)
+                                {
+                                    <option>Genero.genero</option>
+
+                                }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                        <label asp-for="Programa" class="col-form-label">Programa</label>
+                        <label asp-for="IdPrograma" class="col-form-label">Programa</label>
                         <select id="Programa" class="form-control">
                             <option selected>Choose...</option>
-                            <option>Especializacion en seguridad de información</option>
-                            <option>Maestria en gestion TI</option>
-                            <option>Maestria en gestion de riesgo y medio ambiente</option>
+                            @foreach (var Programa in ViewBag.programa)
+                            {
+                                <option>Programa.programa</option>
+
+                            }
                         </select>
                     </div>
                         </div>
@@ -96,8 +101,8 @@
                             </div>
                         </div>
                     <br />
-                        <button type="button" class="btn btn-primary">Ingresar</button>
-                        <button type="submit" class="btn btn-danger">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                        <button role="link" onclick="https://localhost:44310/coordinador" class="btn btn-danger">Cancelar</button>
                 </form>
             </div>
         </div>

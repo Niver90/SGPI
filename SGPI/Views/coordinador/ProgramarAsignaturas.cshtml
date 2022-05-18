@@ -16,12 +16,13 @@
                     <div class="form-inline">
 
                         <div class="">
-                            <label asp-for="Programa" class="col-form-label">Programa</label>
+                            <label asp-for="IdPrograma" class="col-form-label">Programa</label>
                             <select id="Programa" class="form-control">
-                                <option selected>Seleccione el programa</option>
-                                <option>Especializacion en seguridad de información</option>
-                                <option>Maestria en gestion TI</option>
-                                <option>Maestria en gestion de riesgo y medio ambiente</option>
+                                @foreach (var Programa in ViewBag.programa)
+                                {
+                                    <option>Programa.programa</option>
+
+                                }
                             </select>
                         </div>
                         &nbsp;&nbsp;&nbsp;
@@ -44,22 +45,23 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="date" size="9" /></td>
-                                <td><input type="date" size="9" /></td>
+                                <td><input type="datetime" size="9" /></td>
+                                <td><input type="datetime" size="9" /></td>
                                 <td><input type="text" name="bloque" size="9" /></td>
                                 <td><input type="text" name="sala" size="9" /></td>
                                 <td>
                                     <select id="Modulo" class="form-control"><option selected>Choose...</option></select>
                                 </td>
-                                <td></td>
+                                <td><input type="text" name="Cod.Asignatura" size="9" /></td>
                             </tr>
                         </tbody>
-                    </table>
 
+                    </table>
+                    <button Type="submit" name="Añadir" class="btn btn-dark añadir">Añadir</button>
                 </form>
 
             </div>
         </div>
     </div>
-    <button Type="button" name="Añadir" class="btn btn-dark añadir">Añadir</button>
+    
 </div>

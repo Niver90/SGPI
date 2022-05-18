@@ -15,17 +15,17 @@
                 <form method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label asp-for="TipoDoc" class="col-form-label">Tipo Documento</label>
+                            <label asp-for="IdTipoDocumento" class="col-form-label">Tipo Documento</label>
                             <select id="TipoDoc" class="form-control">
-                                @foreach (var TipoDoc in ViewBag.tipo_documento)
+                                @foreach (var TipoDoc in ViewBag.tipodocumento)
                                 {
-                                <option>TipoDoc.tipoDocumento</option>
+                                <option>TipoDoc.tipodocumento</option>
 
                                 }
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label asp-for="NumDoc" class="col-form-label">No. Documento</label>
+                            <label asp-for="Documento" class="col-form-label">No. Documento</label>
                             <input type="text" class="form-control" id="NumDocumento" placeholder="Document number">
                         </div>
                     </div>
@@ -55,35 +55,41 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label asp-for="Genero" class="col-form-label">Genero</label>
+                            <label asp-for="IdGenero" class="col-form-label">Genero</label>
                             <select id="Genero" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Masculinos</option>
-                                <option>Femenino</option>
-                                <option>Otro</option>
+                                @foreach (var Genero in ViewBag.genero)
+                                {
+                                    <option>Genero.genero</option>
+
+                                }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label asp-for="Rol" class="col-form-label">Tipo Rol</label>
+                            <label asp-for="IdRol" class="col-form-label">Tipo Rol</label>
                             <select id="TipoRol" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Administrador</option>
-                                <option>Coordinador</option>
-                                <option>Estudiante</option>
+                                @foreach (var Rol in ViewBag.rol)
+                                {
+                                    <option>Rol.rol</option>
+
+                                }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label asp-for="Programa" class="col-form-label">Programa</label>
+                            <label asp-for="IdPrograma" class="col-form-label">Programa</label>
                             <select id="Programa" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Especializacion en seguridad de información</option>
-                                <option>Maestria en gestion TI</option>
-                                <option>Maestria en gestion de riesgo y medio ambiente</option>
+                                @foreach (var Programa in ViewBag.programa)
+                                {
+                                    <option>Programa.programa</option>
+
+                                }
                             </select>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Crear</button>
-                    <button type="submit" class="btn btn-danger">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <button role="link" onclick="https://localhost:44310/Admin" class="btn btn-danger">Cancelar</button>
                 </form>
             </div>
         </div>

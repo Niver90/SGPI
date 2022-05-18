@@ -1,0 +1,64 @@
+﻿@model SGPI.Models.Usuario
+
+@{ ViewData["Title"] = "Editar usuario"; }
+
+<h1 class="text-center mt-5">Editar Usuario</h1>
+<form method="post" asp-route-IdUsuario=@ViewBag.idusuario>
+    <input asp-for="Password" type="hidden" value="12345">
+    <input asp-for="Egresado" type="hidden" value="1">
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <label for="" class="form-label">Tipo de documento:</label>
+                @Html.DropDownList("IdTipoDocumento", new SelectList(ViewBag.tipodocumento, "IdTipoDocumento", "TipoDocumento1"), new { @class = "form-control" })
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Número de documento</label>
+                <input asp-for="Documento" name="documento" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input asp-for="Nombre" name="nombre" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Apellidos</label>
+                <input asp-for="Apellido" name="apellido" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Correo</label>
+                <input asp-for="Email" name="email" type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Número Telefonico</label>
+                <input asp-for="Telefono" name="telefono" type="number" class="form-control">
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="" class="form-label">programa:</label>
+                @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "Programa1"), new { @class = "form-control" })
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tipo de Rol:</label>
+                        @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "Rol1"), new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Genero:</label>
+                        @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero, "IdGenero", "Genero1"), new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Dirección</label>
+                <input asp-for="Direccion" name="direccion" type="text" class="form-control">
+            </div>
+            <div class="mx-auto d-grid col-4">
+                <button type="submit" class="btn btn-dark">Editar usuario</button>
+            </div>
+        </div>
+    </div>
+</form>
