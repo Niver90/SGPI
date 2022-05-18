@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="form-group col-md-7">
-                            <label asp-for="Programa" class="col-form-label"></label>
+                            <label asp-for="IdPrograma" class="col-form-label"></label>
                             <select id="Programa" class="form-control">
                                 <option selected>Elija su Programa...</option>
                                 <option>Especializacion en seguridad de información</option>
@@ -34,12 +34,12 @@
                     <table class="table table-dark table-striped" border="1">
                         <thead>
                             <tr>
-                                <th scope="col">@Html.DisplayNameFor(model => model.TipoDoc)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.NumDoc)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Nombre)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Apellido)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Programa)</th>
-                                <th scope="col">@Html.DisplayNameFor(model => model.Rol)</th>
+                                <th scope="col">Tipo Documento</th>
+                                <th scope="col">N.o Documento</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Programa</th>
+                                <th scope="col">Rol</th>
                                 <th scope="col">FechaMod</th>
                                 <th scope="col">Opciones</th>
                             </tr>
@@ -47,13 +47,13 @@
                         <tbody>
                             <tr>
 
-                                <td>@Html.DisplayFor(model => model.TipoDoc)</td>
-                                <td>@Html.DisplayFor(model => model.NumDoc)</td>
+                                <td>@Html.DisplayFor(model => model.IdTipoDocumento)</td>
+                                <td>@Html.DisplayFor(model => model.Documento)</td>
                                 <td>@Html.DisplayFor(model => model.Nombre)</td>
                                 <td>@Html.DisplayFor(model => model.Apellido)</td>
-                                <td>@Html.DisplayFor(model => model.Programa)</td>
-                                <td>@Html.DisplayFor(model => model.Rol)</td>
-                                <td>123</td>
+                                <td>@Html.DisplayFor(model => model.IdPrograma)</td>
+                                <td>@Html.DisplayFor(model => model.IdRol)</td>
+                                <td></td>
                                 <td>
                                     <input type="button" value="Editar">
                                     &nbsp;<input type="button" value="Borrar">
