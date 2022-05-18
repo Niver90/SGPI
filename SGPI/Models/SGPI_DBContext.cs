@@ -34,7 +34,7 @@ namespace SGPI.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-T8GLKIL\\SQLEXPRESS;Database=SGPI_DB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-PL0F26T\\SQLEXPRESS;Database=SGPI_DB;Trusted_Connection=True;");
             }
         }
 
@@ -302,14 +302,14 @@ namespace SGPI.Models
 
             modelBuilder.Entity<TipoDocumento>(entity =>
             {
-                entity.HasKey(e => e.IdTipoDocumento)
+                entity.HasKey(e => e.id_tipo_documento)
                     .HasName("PK__TipoDocu__9F38507C00CA99B4");
 
                 entity.ToTable("TipoDocumento");
 
-                entity.Property(e => e.IdTipoDocumento).HasColumnName("id_tipo_documento");
+                entity.Property(e => e.id_tipo_documento).HasColumnName("id_tipo_documento");
 
-                entity.Property(e => e.TipoDocumento1)
+                entity.Property(e => e.tipo_documento)
                     .IsRequired()
                     .HasMaxLength(500)
                     .IsUnicode(false)

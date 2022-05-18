@@ -12,8 +12,8 @@ namespace SGPI.Models
             Usuarios = new HashSet<Usuario>();
         }
 
-        public int IdTipoDocumento { get; set; }
-        public string TipoDocumento1 { get; set; }
+        public int id_tipo_documento { get; set; }
+        public string tipo_documento { get; set; }
 
         public virtual ICollection<Usuario> Usuarios { get; set; }
     }

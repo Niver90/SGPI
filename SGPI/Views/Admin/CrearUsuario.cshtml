@@ -17,9 +17,9 @@
                         <div class="form-group col-md-6">
                             <label asp-for="IdTipoDocumento" class="col-form-label">Tipo Documento</label>
                             <select id="TipoDoc" class="form-control">
-                                @foreach (var TipoDoc in ViewBag.tipodocumento)
+                                @foreach (var TipoDoc in ViewBag.tipoDocumento)
                                 {
-                                <option>TipoDoc.tipodocumento</option>
+                                <option>@TipoDoc.tipo_documento</option>
 
                                 }
                             </select>
